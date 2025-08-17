@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qui est en live ? – Événement caritatif</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Tableau en temps réel des streameurs participants et de leur statut live.">
+</head>
+<body>
+  <header class="header">
+    <img src="assets/logo.png" alt="Logo événement" class="logo" />
+    <div class="titles">
+      <h1>Événement caritatif</h1>
+      <p>Tableau des streameurs en direct (mise à jour auto)</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="search-wrap">
+        <label for="search">Recherche</label>
+        <input id="search" type="text" placeholder="Filtrer par pseudo ou titre…" />
+      </div>
+      <div class="meta">
+        <span id="countLive">0 en live</span>
+        <span id="lastUpdate">—</span>
+      </div>
+    </section>
+
+    <section id="warn" class="warn" hidden></section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Organisateur·rice·s</h2>
+        <span id="countOrganizers" class="badge"></span>
+      </div>
+      <div id="grid-organizers" class="grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Participants</h2>
+        <span id="countParticipants" class="badge"></span>
+      </div>
+      <div id="grid-participants" class="grid" aria-live="polite"></div>
+    </section>
+
+    <template id="card-tpl">
+      <article class="card">
+        <a class="thumb-link" target="_blank" rel="noopener">
+          <img class="thumb" alt="Miniature du live" />
+        </a>
+        <div class="card-body">
+          <div class="user">
+            <img class="avatar" alt="Avatar" />
+            <div class="user-meta">
+              <a class="login" target="_blank" rel="noopener"></a>
+              <span class="live-pill">Hors ligne</span>
+            </div>
+          </div>
+          <div class="title"></div>
+          <div class="stats"></div>
+        </div>
+      </article>
+    </template>
+  </main>
+
+  <footer class="footer">
+    <small>Astuce raid : cliquez un pseudo pour ouvrir la chaîne dans Twitch.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
