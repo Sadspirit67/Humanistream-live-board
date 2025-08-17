@@ -1,8 +1,8 @@
 
 // ====== CONFIG À RENSEIGNER ======
 // Récupère ces valeurs dans https://dev.twitch.tv/console/apps
-const TWITCH_CLIENT_ID = "ewuh2nhhg1cfre8dwvwjb54gosuyvo"; // ex: abcdef1234567890
-const TWITCH_APP_TOKEN = "x3d8u4uy6rroys2pgvsj7dhgn51ono"; // "App Access Token" (Client Credentials)
+const TWITCH_CLIENT_ID = "y1z1ffxabakcw927se6dkm3jkhgpeb"; // ex: abcdef1234567890
+const TWITCH_APP_TOKEN = "u28d8ip1479nep4isnjeqb04pvjvx6"; // "App Access Token" (Client Credentials)
 const REFRESH_MS = 60_000; // 60 s
 const STREAMERS_TXT_URL = "streamers.txt"; // chemin vers la liste
 
